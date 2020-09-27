@@ -12,6 +12,6 @@ jobs:
         with:
           java-version: 11
       - name: Publish package
-        run: gradle publish
+        run: mvn -B package --file pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
